@@ -311,3 +311,4 @@ app.get('/api/health', (_req, res) => {
 // });
 
 export const handler = serverless(app);
+export default serverless(app); // Vercel needs this
