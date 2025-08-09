@@ -4,7 +4,7 @@ import serverless from 'serverless-http';
 
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+// const PORT = process.env.PORT || 3001;
 
 // Middleware
 app.use(cors());
@@ -306,8 +306,8 @@ app.get('/api/health', (_req, res) => {
   res.json({ status: 'OK', message: 'Portfolio API is running' });
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`Server running on port ${PORT}`);
+// });
 
 export const handler = serverless(app);
